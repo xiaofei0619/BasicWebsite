@@ -5,9 +5,9 @@
         "npm": "*"
     },
     "scripts": {
-        "start": "http-server"
+        "start": "node server.js"
     },
     "dependencies": {
-        "http-server": "*"
+        "mongodb": "^3.6.9"
     }
 }

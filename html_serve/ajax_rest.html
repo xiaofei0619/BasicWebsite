@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <head>
+        <title>Ajax REST demo</title>
+    </head>
+    <body> 
+        <p>
+            <button id="getDoohickeys" type="button">Click for doohickeys</button>
+        </p>
+        <div>
+            <table id="doohickeys" style="width:100%">
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            $("#getDoohickeys").click(function() {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', '/api_rest/doohickeys');
+                //set up the client
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        console.log(xhr.responseText);
+                        var data = JSON.parse(xhr.responseText);
+                        console.log(data);
+                        data.forEach(function(item) {
+                            $("#doohickeys").append(
+                                `<tr>
+                                    <td>${item.name}</td>
+                                    <td>${item.description}</td>
+                                </tr>`
+                            )
+                        });
+                    }
+                };      
+                //send the ajax request
+                xhr.send();
+            });
+        });
+    </script>
+<html

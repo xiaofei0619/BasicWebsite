@@ -1,0 +1,49 @@
+.myContainerDiv {
+    background-color: yellowgreen;
+    border: 3px grey solid;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 20px;
+}
+
+p.fancy {
+    /*font-family: 'Dancing Script' cursive;*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+.flex_container_div {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my_left_div {
+    background-color: aquamarine !important;
+}
+
+div.my_center_div {
+    background-color: cadetblue;
+}
+
+.my_right_div {
+    background-color: cornflowerblue;
+}
+
+.my_div {
+    background-color: purple;
+    padding: 5px;
+    width: 250px;
+    height: 80px;
+    margin: 10px;
+    line-height: 80px;
+    color: wheat;
+    text-align: center;
+}
